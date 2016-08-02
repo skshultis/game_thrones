@@ -1,0 +1,10 @@
+<ul>
+  <% @houses.each do |house| %>
+
+  <p><%= link_to house.name, house_path(house)%></p>
+      <p><%= house.location %></p>
+      <img class: "house" src="<%= house.photo_url %>">
+      <p><%= link_to 'delete house', house_path(house), method: :delete, data:{confirm: "Are you sure you want to delete this house?"} %></p>
+  <% end %>
+</ul>
+<h2><%= link_to "create new house", new_house_path %></h2>

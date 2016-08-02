@@ -1,0 +1,12 @@
+<p>
+  <strong>Name:</strong>
+  <%= @character.name %>
+</p>
+
+<img class: "character" src="<%= @character.photo_url %>">
+<p><%= link_to character_path(@character.house) %></p>
+
+<ul>
+  <p><%= link_to 'delete character', character_path(@character), method: :delete, data:{confirm: "Are you sure you want to delete this character?"} %></p>
+</ul>
+<h2><%= link_to "create new character", new_character_path %></h2>

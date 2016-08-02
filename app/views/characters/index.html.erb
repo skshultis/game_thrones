@@ -1,0 +1,9 @@
+<ul>
+  <% @characters.each do |character| %>
+
+  <p><%= link_to character.name, character_path(character)%></p>
+      <img class: "character" src="<%= character.photo_url %>">
+      <p><%= link_to 'delete character', character_path(character), method: :delete, data:{confirm: "Are you sure you want to delete this character?"} %></p>
+  <% end %>
+</ul>
+<h2><%= link_to "create new character", new_character_path %></h2>
