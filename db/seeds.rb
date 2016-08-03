@@ -9,10 +9,10 @@
 House.destroy_all
 Character.destroy_all
 
-stark = House.create(name: "Stark", location: "Westeros", photo_url: "http://static.srcdn.com/wp-content/uploads/house-stark-sigil-winter-is-coming.jpg")
-lannister = House.create(name: "Lannister", location: "Casterly Rock", photo_url: "http://www.myrawrist.com/wp-content/uploads/2016/03/game_of_thrones__house_lannister_wallpaper_by_psychovivi-d7hp40u.jpg")
-baratheon = House.create(name: "Baratheon", location: "Storm's End", photo_url: "http://www.hbo.com/assets/images/series/game-of-thrones/downloads/baratheon/wallpaper-baratheon-sigil-1600.jpg")
-targaryen = House.create(name: "Targaryen", location: "Essos", photo_url: "https://i.ytimg.com/vi/AIVHimZJSGw/maxresdefault.jpg")
+stark = House.create(name: "Stark", location: "Westeros", photo_url: "http://icons.iconarchive.com/icons/limav/game-of-thrones/512/Stark-icon.png")
+lannister = House.create(name: "Lannister", location: "Casterly Rock", photo_url: "http://icons.iconarchive.com/icons/limav/game-of-thrones/512/Lannister-icon.png")
+baratheon = House.create(name: "Baratheon", location: "Storm's End", photo_url: "http://icons.iconarchive.com/icons/limav/game-of-thrones/512/Baratheon-icon.png")
+targaryen = House.create(name: "Targaryen", location: "Essos", photo_url: "http://icons.iconarchive.com/icons/limav/game-of-thrones/512/Targaryen-icon.png")
 
 Character.create(name: "Mr. Tickle", photo_url: "http://vignette1.wikia.nocookie.net/mrmen/images/8/8d/MrTickle-1-.gif/revision/latest?cb=20090826034652", house: stark)
 Character.create(name: "Mr. Happy", photo_url: "http://vignette3.wikia.nocookie.net/mrmen/images/3/31/Mr.Happy.jpg/revision/latest?cb=20090711074927", house: stark)

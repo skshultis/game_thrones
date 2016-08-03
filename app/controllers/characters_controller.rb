@@ -8,19 +8,17 @@ class CharactersController < ApplicationController
 
   def new
     @character = Character.new
+    @houses = House.all
   end
 
   def create
-    @character = Character.create(character_params)
-    if @character.save
-      redirect_to @character, notice: "you created a new character: #{@character.name}"
-    else
-      render :new
-    end
+    @character = Character.create!(character_params)
+    redirect_to @character, notice: "you created a new character: #{@character.name}"
   end
 
   def destroy
-    @character.update(character_params)
+    @character = Character.find(params[:id])
+    @character.destroy
     redirect_to @character
   end
 
@@ -30,7 +28,7 @@ class CharactersController < ApplicationController
   private
 
   def character_params
-    params.require(:character).permit(:name, :photo_url)
+    params.require(:character).permit(:name, :photo_url, :house_id)
   end
 
   def set_character

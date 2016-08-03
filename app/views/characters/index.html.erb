@@ -1,9 +1,9 @@
-<ul>
+<h1>Characters</h1>
   <% @characters.each do |character| %>
-
-  <p><%= link_to character.name, character_path(character)%></p>
-      <img class: "character" src="<%= character.photo_url %>">
-      <p><%= link_to 'delete character', character_path(character), method: :delete, data:{confirm: "Are you sure you want to delete this character?"} %></p>
+<div class="character">
+  <%= link_to character.name, character_path(character), class:'linkto' %></p>
+      <img src="<%= character.photo_url %>">
+      <p><%= link_to 'delete character', character_path(character), method: :delete, data:{confirm: "Are you sure you want to delete this character?"}, class:'linkto' %></p>
+  </div>
   <% end %>
-</ul>
-<h2><%= link_to "create new character", new_character_path %></h2>
+<h2><%= link_to "create new character", new_character_path, class:'linkto' %></h2>
